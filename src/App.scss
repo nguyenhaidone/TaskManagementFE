@@ -1,0 +1,106 @@
+// define color
+$blue1: #0079bf;
+$blue2: #319bd8;
+$blue3: #49aee9;
+$blue4: #6ec3f5;
+$black1: #222222;
+$white: #ffffff;
+$white1: #f0f0f0;
+
+// define font
+$fontFamily: 'Roboto', sans-serif;
+$fontSize14: 14px;
+$fontSize18: 18px;
+$fontSize20: 20px;
+$fontSize24: 24px;
+$fontWeightLight: 300;
+$fontWeightRegular: 400;
+$fontWeightMedium: 500;
+$fontWeightBold: 700;
+$lineHeight36: 36px;
+
+// define scale
+$spacing: 8px;
+$borderRadius: 8px;
+
+
+body{
+    margin:0;
+    font-family: $fontFamily;
+    font-size:$fontSize14;
+    font-weight: $fontWeightRegular;
+    line-height:1.3em;
+}
+
+.App{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 40px 50px 1fr;
+    line-height: 1.3em;
+    background-color: $blue1;
+    
+    .navbar{
+        padding-left: $spacing;
+        display: flex;
+        align-items: center;
+        
+        &.option{
+            font-size: $fontSize24;
+            font-weight: $fontWeightBold;
+            background-color: $blue2;
+        }
+        &.board{
+            font-size: $fontSize20;
+            font-weight: $fontWeightMedium;
+            background-color: $blue3;
+        }
+    }
+
+    .workspace{
+        display: flex;
+        overflow-x: auto;
+
+        .columns{
+            flex: 0 0 auto;
+            width: 300px;
+            height: calc(100% - #{$spacing}); 
+            > * {
+                background-color: $white1;
+                color: $black1;
+                padding: 0 $spacing; 
+            }
+            header{
+                padding-left: 15px;
+                height: $lineHeight36;
+                line-height:$lineHeight36;
+                font-size: $fontSize18;
+                font-weight: $fontWeightBold; 
+                border-top-left-radius: $borderRadius;
+                border-top-right-radius: $borderRadius;
+            }
+            footer{
+                padding-left: 15px;
+                height: $lineHeight36;
+                line-height:$lineHeight36;
+                font-size: $fontSize14;
+                font-weight: $fontWeightRegular; 
+                border-bottom-left-radius: $borderRadius;
+                border-bottom-right-radius: $borderRadius;
+            }
+            ul{
+                list-style-type: none;
+                margin: 0;
+                max-height: calc(100% - #{$lineHeight36} * 2);
+                overflow-y: auto;
+
+                li{
+                    background-color: $white;
+
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
