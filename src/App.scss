@@ -8,7 +8,7 @@ $white: #ffffff;
 $white1: #f0f0f0;
 
 // define font
-$fontFamily: 'Roboto', sans-serif;
+$fontFamily: "Roboto", sans-serif;
 $fontSize14: 14px;
 $fontSize18: 18px;
 $fontSize20: 20px;
@@ -23,82 +23,92 @@ $lineHeight36: 36px;
 $spacing: 8px;
 $borderRadius: 8px;
 
-
-body{
-    margin:0;
+body {
+    margin: 0;
     font-family: $fontFamily;
-    font-size:$fontSize14;
+    font-size: $fontSize14;
     font-weight: $fontWeightRegular;
-    line-height:1.3em;
+    line-height: 1.3em;
 }
 
-.App{
+.App {
     height: 100vh;
     display: grid;
     grid-template-rows: 40px 50px 1fr;
     line-height: 1.3em;
     background-color: $blue1;
-    
-    .navbar{
+
+    .navbar {
         padding-left: $spacing;
         display: flex;
         align-items: center;
-        
-        &.option{
+
+        &.option {
             font-size: $fontSize24;
             font-weight: $fontWeightBold;
             background-color: $blue2;
         }
-        &.board{
+        &.board {
             font-size: $fontSize20;
             font-weight: $fontWeightMedium;
-            background-color: $blue3;
+            // background-color: $blue3;
         }
     }
 
-    .workspace{
+    .workspace {
         display: flex;
         overflow-x: auto;
 
-        .columns{
+        .columns {
             flex: 0 0 auto;
             width: 300px;
-            height: calc(100% - #{$spacing}); 
+            height: calc(100% - #{$spacing});
+            margin-left: $spacing;
             > * {
                 background-color: $white1;
                 color: $black1;
-                padding: 0 $spacing; 
+                padding: 0 $spacing;
             }
-            header{
+            header {
                 padding-left: 15px;
                 height: $lineHeight36;
-                line-height:$lineHeight36;
+                line-height: $lineHeight36;
                 font-size: $fontSize18;
-                font-weight: $fontWeightBold; 
-                border-top-left-radius: $borderRadius;
-                border-top-right-radius: $borderRadius;
+                font-weight: $fontWeightBold;
+                border-top-left-radius: $borderRadius * 1.5;
+                border-top-right-radius: $borderRadius * 1.5;
             }
-            footer{
+            footer {
                 padding-left: 15px;
                 height: $lineHeight36;
-                line-height:$lineHeight36;
+                line-height: $lineHeight36;
                 font-size: $fontSize14;
-                font-weight: $fontWeightRegular; 
+                font-weight: $fontWeightRegular;
                 border-bottom-left-radius: $borderRadius;
                 border-bottom-right-radius: $borderRadius;
             }
-            ul{
+            ul {
                 list-style-type: none;
                 margin: 0;
                 max-height: calc(100% - #{$lineHeight36} * 2);
                 overflow-y: auto;
-
-                li{
+                li {
                     background-color: $white;
-
-                    img{
-                        width: 100%;
+                    padding: $spacing;
+                    cursor: pointer;
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                    &:not(:last-child) {
+                        margin-bottom: $spacing;
                     }
+                    img {
+                        display: block;
+                        width: calc(100% + 2 * #{$spacing});
+                        margin: -$spacing 0 $spacing (-$spacing);
+                        // width: 100%;
+                        border-top-left-radius: $borderRadius;
+                        border-top-right-radius: $borderRadius;
+                    }
+                    border-radius: $borderRadius;
                 }
             }
         }
