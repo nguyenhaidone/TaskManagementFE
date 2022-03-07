@@ -1,0 +1,37 @@
+@import "./_globleStyle.scss";
+
+.columns {
+    flex: 0 0 auto;
+    width: 300px;
+    height: calc(100% - #{$spacing});
+    margin-left: $spacing;
+    > * {
+        background-color: $white1;
+        color: $black1;
+        padding: 0 $spacing;
+    }
+    header {
+        padding-left: 15px;
+        height: $lineHeight36;
+        line-height: $lineHeight36;
+        font-size: $fontSize18;
+        font-weight: $fontWeightBold;
+        border-top-left-radius: $borderRadius * 1.5;
+        border-top-right-radius: $borderRadius * 1.5;
+    }
+    footer {
+        padding-left: 15px;
+        height: $lineHeight36;
+        line-height: $lineHeight36;
+        font-size: $fontSize14;
+        font-weight: $fontWeightRegular;
+        border-bottom-left-radius: $borderRadius;
+        border-bottom-right-radius: $borderRadius;
+    }
+    ul.task-list {
+        list-style-type: none;
+        margin: 0;
+        max-height: calc(100% - #{$lineHeight36} * 2);
+        overflow-y: auto;
+    }
+}
