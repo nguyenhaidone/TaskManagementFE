@@ -28,7 +28,7 @@
         border-bottom-left-radius: $borderRadius;
         border-bottom-right-radius: $borderRadius;
     }
-    ul.task-list {
+    ul.card-list {
         list-style-type: none;
         margin: 0;
         max-height: calc(100% - #{$lineHeight36} * 2);
