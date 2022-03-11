@@ -6,13 +6,13 @@ const Card = (props) => {
   const { card } = props;
   return (
     <>
-      <li className="card-item">
+      <div className="card-item">
         {card.cover && <img
           src={card.cover}
           alt="cover"
         />}
         {card.title}
-      </li>
+      </div>
     </>
   );
 };
