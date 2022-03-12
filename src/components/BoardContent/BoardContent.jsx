@@ -5,6 +5,7 @@ import "./BoardContent.scss";
 import { isEmpty } from "lodash";
 import { initialData } from "actions/initialData";
 import { mapOrder } from "ultilities/ultis";
+import { applyDrag } from "../../ultilities/dnd";
 
 const BoardContent = () => {
   const [board, setBoard] = useState({});
@@ -29,6 +30,30 @@ const BoardContent = () => {
 
   const onColumnDrop = (dropResult) => {
     console.log(dropResult);
+    let newColumn = [...column];
+    newColumn = applyDrag(newColumn, dropResult);
+    setColumn(newColumn);
+    console.log(column);
+    console.log(newColumn);
+
+    let newBoard = { ...board };
+    newBoard.columnOrder = newColumn.map((c) => c.id);
+    newBoard.columns = newColumn;
+    setBoard(newBoard);
+  };
+
+  const onCardDrop = (columnId, dropResult) => {
+    //log history when change column
+    if (dropResult.removedIndex !== null || dropResult.addedIndex !== null) {
+      let newColumn = [...column];
+
+      let curColumn = newColumn.find((c) => c.id === columnId);
+
+      curColumn.cards = applyDrag(curColumn.cards, dropResult);
+      curColumn.cardOrder = curColumn.cards.map((i) => i.id);
+
+      setColumn(newColumn);
+    }
   };
 
   return (
@@ -43,13 +68,16 @@ const BoardContent = () => {
             showOnTop: true,
             className: "cards-drop-preview",
           }}
-          getChildPayload={index => column[index]}
+          getChildPayload={(index) => column[index]}
         >
           {column.map((column, index) => (
             <Draggable key={index}>
-              <Column column={column} />
+              <Column column={column} onCardDrop={onCardDrop} />
             </Draggable>
           ))}
+          <div className="add-new-column">
+            <i className="fa fa-plus icon"></i>Add another column
+          </div>
         </Container>
       </nav>
     </>
