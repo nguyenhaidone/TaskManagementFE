@@ -14,7 +14,7 @@ export const initialData = {
         {
           id: "column-1",
           boardId: "board-1",
-          title: "Open",
+          title: "Backlog 🤖",
           cardOrder: ["card-1", "card-2", "card-3"],
           cards: [
             {
@@ -43,7 +43,7 @@ export const initialData = {
         {
           id: "column-2",
           boardId: "board-1",
-          title: "Pending",
+          title: "Design 🎨",
           cardOrder: ["card-8", "card-9", "card-10"],
           cards: [
             {
@@ -72,7 +72,7 @@ export const initialData = {
         {
           id: "column-3",
           boardId: "board-1",
-          title: "In Progress",
+          title: "To do 💻",
           cardOrder: ["card-11", "card-12", "card-13 "],
           cards: [
             {
@@ -102,7 +102,7 @@ export const initialData = {
         {
           id: "column-4",
           boardId: "board-1",
-          title: "Complete",
+          title: "Doing 🏋️",
           cardOrder: ["card-44", "card-45", "card-46"],
           cards: [
             {
@@ -132,7 +132,7 @@ export const initialData = {
         {
           id: "column-5",
           boardId: "board-1",
-          title: "In Review",
+          title: "Code review ☕",
           cardOrder: ["card-55", "card-56", "card-57", "card-58", "card-59"],
           cards: [
             {
@@ -177,7 +177,7 @@ export const initialData = {
         {
           id: "column-6",
           boardId: "board-1",
-          title: "Accept",
+          title: "Done 💯",
           cardOrder: ["card-66", "card-67", "card-68"],
           cards: [
             {
