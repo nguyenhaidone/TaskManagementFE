@@ -14,5 +14,8 @@ body {
     grid-template-rows: 40px 50px 1fr;
     line-height: 1.3em;
     background-color: $blue1;
-
+    .icon{
+        font-size: $fontSize14;
+        margin-right: 3px;
+    }
 }
