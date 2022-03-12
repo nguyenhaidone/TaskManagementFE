@@ -28,6 +28,14 @@
         font-weight: $fontWeightRegular;
         border-bottom-left-radius: $borderRadius;
         border-bottom-right-radius: $borderRadius;
+        color: $gray;
+        transition: 0.5s;
+        .footer-actions {
+            cursor: pointer;
+            &:hover {
+                color: $black1;
+            }
+        }
     }
     .card-list {
         list-style-type: none;
@@ -37,6 +45,7 @@
         .card-ghost {
             transition: transform 0.18s ease;
             transform: rotateZ(5deg);
+            font-weight: $fontWeightBold;
         }
 
         .card-ghost-drop {
@@ -45,16 +54,16 @@
         }
         .drop-preview {
             background-color: rgba(150, 150, 200, 0.1);
-            border: 1px dashed #abc;
+            // border: 1px dashed #abc;
             margin: 5px;
         }
 
         .column-drop-preview {
             background-color: rgba(150, 150, 200, 0.1);
-            border: 1px dashed #abc;
+            // border: 1px dashed #abc;
             margin: 5px 45px 5px 5px;
         }
-        .smooth-dnd-draggable-wrapper{
+        .smooth-dnd-draggable-wrapper {
             border-radius: $borderRadius;
             margin: $spacing 0;
         }
