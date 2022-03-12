@@ -1,7 +1,23 @@
-@import './_globleStyle.scss';
+@import "./_globleStyle.scss";
 
 .workspace {
     display: flex;
     overflow-x: auto;
+    flex-wrap: nowrap;
 
+    .add-new-column {
+        width: 250px;
+        height: 32px;
+        line-height: 32px;
+        padding: 4px 0px 4px 15px;
+        margin: 0 $spacing;
+        cursor: pointer;
+        color: $white;
+        background-color: hsl(0, 0%, 100%, 0.24);
+        border-radius: $borderRadius;
+        &:hover {
+            background-color: hsl(0, 0%, 100%, 0.8);
+            color: $black1;
+        }
+    }
 }
