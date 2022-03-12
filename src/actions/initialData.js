@@ -2,12 +2,19 @@ export const initialData = {
   boards: [
     {
       id: "board-1",
-      columnOrder: ["column-1", "column-2", "column-3"],
+      columnOrder: [
+        "column-1",
+        "column-2",
+        "column-3",
+        "column-4",
+        "column-5",
+        "column-6",
+      ],
       columns: [
         {
           id: "column-1",
           boardId: "board-1",
-          title: "To do",
+          title: "Open",
           cardOrder: ["card-1", "card-2", "card-3"],
           cards: [
             {
@@ -36,7 +43,7 @@ export const initialData = {
         {
           id: "column-2",
           boardId: "board-1",
-          title: "In progress",
+          title: "Pending",
           cardOrder: ["card-8", "card-9", "card-10"],
           cards: [
             {
@@ -65,7 +72,7 @@ export const initialData = {
         {
           id: "column-3",
           boardId: "board-1",
-          title: "Done",
+          title: "In Progress",
           cardOrder: ["card-11", "card-12", "card-13 "],
           cards: [
             {
@@ -73,7 +80,8 @@ export const initialData = {
               boardId: "board-1",
               columnId: "column-3",
               title: "To do card 1",
-              cover: "https://images.pexels.com/photos/2246476/pexels-photo-2246476.jpeg?auto=compress&cs=tinysrgb&w=800",
+              cover:
+                "https://images.pexels.com/photos/2246476/pexels-photo-2246476.jpeg?auto=compress&cs=tinysrgb&w=800",
             },
             {
               id: "card-12",
@@ -86,6 +94,111 @@ export const initialData = {
               id: "card-13",
               boardId: "board-1",
               columnId: "column-3",
+              title: "To do card 3",
+              cover: null,
+            },
+          ],
+        },
+        {
+          id: "column-4",
+          boardId: "board-1",
+          title: "Complete",
+          cardOrder: ["card-44", "card-45", "card-46"],
+          cards: [
+            {
+              id: "card-44",
+              boardId: "board-1",
+              columnId: "column-4",
+              title: "To do card 1",
+              cover:
+                "https://images.pexels.com/photos/2246476/pexels-photo-2246476.jpeg?auto=compress&cs=tinysrgb&w=800",
+            },
+            {
+              id: "card-45",
+              boardId: "board-1",
+              columnId: "column-4",
+              title: "To do card 2",
+              cover: null,
+            },
+            {
+              id: "card-46",
+              boardId: "board-1",
+              columnId: "column-4",
+              title: "To do card 3",
+              cover: null,
+            },
+          ],
+        },
+        {
+          id: "column-5",
+          boardId: "board-1",
+          title: "In Review",
+          cardOrder: ["card-55", "card-56", "card-57", "card-58", "card-59"],
+          cards: [
+            {
+              id: "card-55",
+              boardId: "board-1",
+              columnId: "column-5",
+              title: "To do card 1",
+              cover:
+                "https://images.pexels.com/photos/2246476/pexels-photo-2246476.jpeg?auto=compress&cs=tinysrgb&w=800",
+            },
+            {
+              id: "card-56",
+              boardId: "board-1",
+              columnId: "column-5",
+              title: "To do card 2",
+              cover: null,
+            },
+            {
+              id: "card-57",
+              boardId: "board-1",
+              columnId: "column-5",
+              title: "To do card 3",
+              cover: null,
+            },
+            {
+              id: "card-58",
+              boardId: "board-1",
+              columnId: "column-5",
+              title: "To do card 3",
+              cover: null,
+            },
+            {
+              id: "card-59",
+              boardId: "board-1",
+              columnId: "column-5",
+              title: "To do card 3",
+              cover:
+                "https://images.pexels.com/photos/2246476/pexels-photo-2246476.jpeg?auto=compress&cs=tinysrgb&w=800",
+            },
+          ],
+        },
+        {
+          id: "column-6",
+          boardId: "board-1",
+          title: "Accept",
+          cardOrder: ["card-66", "card-67", "card-68"],
+          cards: [
+            {
+              id: "card-66",
+              boardId: "board-1",
+              columnId: "column-6",
+              title: "To do card 1",
+              cover:
+                "https://images.pexels.com/photos/2246476/pexels-photo-2246476.jpeg?auto=compress&cs=tinysrgb&w=800",
+            },
+            {
+              id: "card-67",
+              boardId: "board-1",
+              columnId: "column-6",
+              title: "To do card 2",
+              cover: null,
+            },
+            {
+              id: "card-68",
+              boardId: "board-1",
+              columnId: "column-6",
               title: "To do card 3",
               cover: null,
             },
