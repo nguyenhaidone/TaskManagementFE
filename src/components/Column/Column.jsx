@@ -9,6 +9,10 @@ const Column = (props) => {
   const { column, onCardDrop } = props;
   const cards = mapOrder(column.cards, column.cardOrder, "id");
 
+  // const onCardDrop = (card) => {
+  //   console.log(card);
+  // };
+
   return (
     <>
       <div className="columns">
