@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Draggable } from "react-smooth-dnd";
+import { useTranslation } from "react-i18next";
 import Card from "components/Card/Card";
 import { mapOrder } from "ultilities/ultis";
 
@@ -8,6 +9,7 @@ import "./Column.scss";
 const Column = (props) => {
   const { column, onCardDrop } = props;
   const cards = mapOrder(column.cards, column.cardOrder, "id");
+  const { t } = useTranslation();
 
   // const onCardDrop = (card) => {
   //   console.log(card);
@@ -49,7 +51,8 @@ const Column = (props) => {
         </div>
         <footer>
           <div className="footer-actions">
-            <i className="fa fa-plus icon"></i>Add another card
+            <i className="fa fa-plus icon"></i>
+            {t("text.addAnotherCard")}
           </div>
         </footer>
       </div>
