@@ -21,6 +21,9 @@
         border-top-right-radius: $borderRadius * 1.5;
     }
     footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         padding-left: 15px;
         height: $lineHeight36;
         line-height: $lineHeight36;
