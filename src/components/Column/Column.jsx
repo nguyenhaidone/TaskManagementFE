@@ -6,12 +6,12 @@ import { mapOrder } from "ultilities/ultis";
 import "./Column.scss";
 
 const Column = (props) => {
-  const { column } = props;
+  const { column, onCardDrop } = props;
   const cards = mapOrder(column.cards, column.cardOrder, "id");
 
-  const onCardDrop = (card) => {
-    console.log(card);
-  };
+  // const onCardDrop = (card) => {
+  //   console.log(card);
+  // };
 
   return (
     <>
@@ -22,7 +22,7 @@ const Column = (props) => {
             groupName="col"
             // onDragStart={(e) => console.log("drag started", e)}
             // onDragEnd={(e) => console.log("drag end", e)}
-            onDrop={(e) => onCardDrop(column.id, e)}
+            onDrop={(dropResult) => onCardDrop(column.id, dropResult)}
             getChildPayload={(index) => cards[index]}
             dragClass="card-ghost"
             dropClass="card-ghost-drop"
@@ -47,7 +47,11 @@ const Column = (props) => {
             ))}
           </Container>
         </div>
-        <footer>Add another card</footer>
+        <footer>
+          <div className="footer-actions">
+            <i className="fa fa-plus icon"></i>Add another card
+          </div>
+        </footer>
       </div>
     </>
   );
