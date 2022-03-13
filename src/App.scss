@@ -1,4 +1,5 @@
-@import './_globleStyle.scss';
+@import "~bootstrap/scss/bootstrap";
+@import "./_globleStyle.scss";
 
 body {
     margin: 0;
@@ -14,5 +15,4 @@ body {
     grid-template-rows: 40px 50px 1fr;
     line-height: 1.3em;
     background-color: $blue1;
-
 }
