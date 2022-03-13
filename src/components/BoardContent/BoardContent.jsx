@@ -11,6 +11,7 @@ import {
 import "./BoardContent.scss";
 import { isEmpty } from "lodash";
 import { initialData } from "actions/initialData";
+import { useTranslation } from "react-i18next";
 import { mapOrder } from "ultilities/ultis";
 import { applyDrag } from "../../ultilities/dnd";
 
@@ -20,6 +21,7 @@ const BoardContent = () => {
   const [isCreateInputOpen, setIsCreateInputOpen] = useState(false);
   const [newColumnTitle, setNewColumnTitle] = useState("");
   const newColumnInputRef = useRef(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const getBoardFromDB = initialData.boards.find(
@@ -42,7 +44,7 @@ const BoardContent = () => {
   }, [isCreateInputOpen]);
 
   if (isEmpty(board)) {
-    return <div className="not-found">Board not found</div>;
+    return <div className="not-found">{t("text.boardNotFound")}</div>;
   }
 
   const onColumnDrop = (dropResult) => {
@@ -132,7 +134,8 @@ const BoardContent = () => {
           {!isCreateInputOpen ? (
             <Row>
               <Col className="add-new-column" onClick={handleToggleInput}>
-                <i className="fa fa-plus icon"></i>Add another column
+                <i className="fa fa-plus icon"></i>
+                {t("text.addAnotherList")}
               </Col>
             </Row>
           ) : (
@@ -149,7 +152,7 @@ const BoardContent = () => {
                   onKeyDown={(e) => e.key === "Enter" && handleOnCreate()}
                 />
                 <Button variant="success" size="sm" onClick={handleOnCreate}>
-                  Add column
+                  {t("text.addList")}
                 </Button>
                 <span
                   className="cancel-add-new-column"
