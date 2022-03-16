@@ -6,5 +6,13 @@
   "addAnotherCard": "Add another card",
   "addAnotherList": "Add another list",
   "boardNotFound": "Board not found",
-  "addList": "Add new list"
+  "addList": "Add new list",
+  "removeCard": "Remove card",
+  "moveAll": "Move all cards in this column",
+  "more": "More...",
+  "confirm": "Confirmation",
+  "acceptButton":"Accept",
+  "declineButton":"Decline",
+  "closeButton":"Close",
+  "areYouSureAboutThat":"Are you sure about that?"
 }

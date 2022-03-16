@@ -110,6 +110,26 @@ const BoardContent = () => {
     setNewColumnTitle(e.target.value);
   };
 
+  const onUpdateColumn = (newColumnToUpdate) => {
+    const columnIdtoUpdate = newColumnToUpdate.id;
+    let newColumn = [...column];
+    const columnIndexToUpdate = newColumn.findIndex(
+      (i) => i.id === columnIdtoUpdate
+    );
+    if (newColumnToUpdate._destroy) {
+      //removed
+      newColumn.splice(columnIndexToUpdate, 1);
+    } else {
+      newColumn.splice(columnIndexToUpdate, 1, newColumnToUpdate);
+    }
+    let newBoard = { ...board };
+    newBoard.columnOrder = newColumn.map((c) => c.id);
+    newBoard.columns = newColumn;
+    setBoard(newBoard);
+    setColumn(newColumn);
+    console.log(columnIndexToUpdate);
+  };
+
   return (
     <>
       <nav className="workspace">
@@ -126,7 +146,11 @@ const BoardContent = () => {
         >
           {column.map((column, index) => (
             <Draggable key={index}>
-              <Column column={column} onCardDrop={onCardDrop} />
+              <Column
+                column={column}
+                onCardDrop={onCardDrop}
+                onUpdateColumn={onUpdateColumn}
+              />
             </Draggable>
           ))}
         </Container>
