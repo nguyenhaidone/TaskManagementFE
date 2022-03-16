@@ -11,14 +11,44 @@
         padding: 0 $spacing;
     }
     header {
-        padding-left: 15px;
+        padding: $spacing;
+        display: flex;
         cursor: pointer;
-        height: $lineHeight36;
+        height: $lineHeight36*1.2;
         line-height: $lineHeight36;
         font-size: $fontSize18;
         font-weight: $fontWeightBold;
         border-top-left-radius: $borderRadius * 1.5;
         border-top-right-radius: $borderRadius * 1.5;
+        .column-title {
+            flex: 90%;
+        }
+        .column-dropdown-actions {
+            flex: 10%;
+            .dropdown {
+                button.dropdown-btn {
+                    padding: 0 $spacing;
+                    font-size: $fontSize14;
+                    height: 32px;
+                    margin-top: -10px;
+                    font-weight: $fontWeightBold;
+                    letter-spacing: 1px;
+                    background-color: transparent;
+                    border-color: transparent;
+                    cursor: pointer;
+                    color: $black1;
+                    &:after {
+                        content: "...";
+                        border: none;
+                        outline: none;
+                        vertical-align: 1.255em;
+                    }
+                    &:hover {
+                        background-color: $whitefefefe;
+                    }
+                }
+            }
+        }
     }
     footer {
         display: flex;
