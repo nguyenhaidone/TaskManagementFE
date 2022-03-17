@@ -19,6 +19,9 @@ const BoardContent = () => {
   const [board, setBoard] = useState({});
   const [column, setColumn] = useState([]);
   const [isCreateInputOpen, setIsCreateInputOpen] = useState(false);
+  const handleToggleInput = () => {
+    setIsCreateInputOpen(!isCreateInputOpen);
+  };
   const [newColumnTitle, setNewColumnTitle] = useState("");
   const newColumnInputRef = useRef(null);
   const { t } = useTranslation();
@@ -74,10 +77,6 @@ const BoardContent = () => {
 
       setColumn(newColumn);
     }
-  };
-
-  const handleToggleInput = () => {
-    setIsCreateInputOpen(!isCreateInputOpen);
   };
 
   const handleOnCreate = () => {
@@ -168,7 +167,7 @@ const BoardContent = () => {
                 <Form.Control
                   size="sm"
                   type="text"
-                  placeholder="Enter column title..."
+                  placeholder={t("text.enterNewColumnTitle")}
                   className="input-enter-new-column"
                   ref={newColumnInputRef}
                   value={newColumnTitle}
@@ -178,10 +177,7 @@ const BoardContent = () => {
                 <Button variant="success" size="sm" onClick={handleOnCreate}>
                   {t("text.addList")}
                 </Button>
-                <span
-                  className="cancel-add-new-column"
-                  onClick={handleToggleInput}
-                >
+                <span className="cancel-add-new" onClick={handleToggleInput}>
                   <i className="fa fa-close icon"></i>
                 </span>
               </Col>
