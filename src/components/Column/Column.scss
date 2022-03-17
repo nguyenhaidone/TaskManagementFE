@@ -14,7 +14,7 @@
         padding: $spacing;
         display: flex;
         cursor: pointer;
-        height: $lineHeight36*1.2;
+        height: $lineHeight36 * 1.2;
         line-height: $lineHeight36;
         font-size: $fontSize18;
         font-weight: $fontWeightBold;
@@ -99,6 +99,14 @@
         .smooth-dnd-draggable-wrapper {
             border-radius: $borderRadius;
             margin: $spacing 0;
+        }
+
+        .add-new-card {
+            .textarea-enter-new-card {
+                min-height: 54px;
+                max-height: 162px;
+                margin-bottom: $spacing;
+            }
         }
     }
 }

@@ -14,5 +14,8 @@
   "acceptButton":"Accept",
   "declineButton":"Decline",
   "closeButton":"Close",
-  "areYouSureAboutThat":"Are you sure about that?"
+  "areYouSureAboutThat":"Are you sure about that?",
+  "addNewCard": "Add new card",
+  "enterNewColumnTitle": "Enter new title column...",
+  "enterNewCardTitle": "Enter new title card..."
 }
