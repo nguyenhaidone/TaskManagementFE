@@ -40,17 +40,6 @@
         input.input-enter-new-column {
             margin: 5px 0;
         }
-        span.cancel-add-new-column {
-            margin: 0 $spacing * 1.5;
-            cursor: pointer;
-            i {
-                font-size: $fontSize20;
-                color: $redSuccess;
-                &:hover{
-                    color: $redSuccessHover;
-                }
-            }
-        }
         button {
             background-color: $greenSuccess;
             border: 1px solid $greenSuccess;
