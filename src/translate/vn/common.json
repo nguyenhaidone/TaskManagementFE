@@ -14,5 +14,8 @@
   "acceptButton":"Chấp nhận",
   "declineButton":"Từ chối",
   "closeButton":"Đóng",
-  "areYouSureAboutThat":"Bạn chắc chắn cho hành động này chứ?"
+  "areYouSureAboutThat":"Bạn chắc chắn cho hành động này chứ?",
+  "addNewCard": "Thêm thẻ mới",
+  "enterNewColumnTitle": "Nhập tên của danh sách...",
+  "enterNewCardTitle": "Nhập tên của thẻ..."
 }
