@@ -4,10 +4,11 @@ import GoogleLoginButton from "components/GoogleLogin/GoogleLogin";
 import React from "react";
 import "./Login.scss";
 import * as Yup from "yup";
-import { Link } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 
 const Login = () => {
   const { t } = useTranslation();
+  // const history = useHistory();
 
   const Schema = Yup.object().shape({
     email: Yup.string()
