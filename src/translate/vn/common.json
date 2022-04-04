@@ -42,5 +42,12 @@
   "rePasswordError": "Mật khẩu không trùng!",
   "registerNow": "Đăng ký ngay hôm nay!",
   "promotion30days": "Tận hưởng 3 tháng sử dụng miễn phí ngay sau khi đăng ký!",
-  "alreadyHaveAccount": "Bạn đã có tài khoản, đăng nhập thôi!"
+  "alreadyHaveAccount": "Bạn đã có tài khoản, đăng nhập thôi!",
+  "kanbanWorkspace": "Không gian làm việc Kanban",
+  "createNewBoard": "Thêm bảng mới, bạn có thể tạo {{number}} bảng nữa!",
+  "createBoard": "Tạo bảng mới",
+  "whatIsBoardName": "Bảng của bạn tên là: ",
+  "newBoardExample": "Ví dụ: Dự án quản lý đô thị...",
+  "helloFriend": "Xin chào {{name}}!",
+  "colorBackground": "Màu nền cho bảng: {{colorCode}}"
 }

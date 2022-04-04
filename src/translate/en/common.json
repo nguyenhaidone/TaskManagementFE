@@ -42,5 +42,12 @@
   "rePasswordError": "Password does not match!",
   "registerNow": "Register now!",
   "promotion30days": "Enjoy 3 months of free usage right after signing up!",
-  "alreadyHaveAccount": "You already have an account, just log in!!"
+  "alreadyHaveAccount": "You already have an account, just log in!!",
+  "kanbanWorkspace": "Kanban Workspace",
+  "createNewBoard": "Create new board, you can create {{number}} boards!",
+  "createBoard": "Create board",
+  "whatIsBoardName": "Board's name is: ",
+  "newBoardExample": "Example: Awesome project,.. ",
+  "helloFriend": "Hello {{name}}!",
+  "colorBackground": "Background color for board: {{colorCode}}"
 }
